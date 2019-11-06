@@ -1,5 +1,5 @@
 .idea/**
 lib/**
-out/**git
+out/**
 **/*.iml
 **/*.log
