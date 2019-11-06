@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1084.0" styleClass="form" stylesheets="@style/common.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.sms.controller.HomeFormController">
+   <children>
+      <ImageView fitHeight="216.0" fitWidth="251.0" layoutX="132.0" layoutY="81.0" onMouseClicked="#imgStudent_MC" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/student.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="214.0" layoutY="321.0" text="Student" />
+      <ImageView fitHeight="216.0" fitWidth="251.0" layoutX="459.0" layoutY="81.0" onMouseClicked="#imgClass_MC" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/class.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="550.0" layoutY="321.0" text="Class" />
+      <ImageView fitHeight="216.0" fitWidth="251.0" layoutX="761.0" layoutY="81.0" onMouseClicked="#imgAllocation_MC" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/studentallocation.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="836.0" layoutY="321.0" text="Allocation" />
+      <ImageView fitHeight="216.0" fitWidth="251.0" layoutX="132.0" layoutY="413.0" onMouseClicked="#imgPayment_MC" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/payment.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="211.0" layoutY="638.0" text="Payment" />
+      <ImageView fitHeight="216.0" fitWidth="251.0" layoutX="472.0" layoutY="420.0" onMouseClicked="#imgEmployee_MC" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/employee.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="554.0" layoutY="648.0" text="Employee" />
+      <ImageView fitHeight="216.0" fitWidth="251.0" layoutX="773.0" layoutY="413.0" onMouseClicked="#imgReports_MC" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/reports.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="855.0" layoutY="648.0" text="Reports" />
+   </children>
+</AnchorPane>

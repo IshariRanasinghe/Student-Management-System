@@ -1,0 +1,17 @@
+
+use sms;
+CREATE TABLE role(id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, role VARCHAR(30))ENGINE=INNODB;
+
+CREATE TABLE employee(id VARCHAR(10) PRIMARY KEY, name VARCHAR(100),gender VARCHAR(20),address VARCHAR(150),contact VARCHAR(10),designationId int, FOREIGN KEY (designationId) REFERENCES role(id))ENGINE=INNODB;
+
+
+CREATE TABLE user(id VARCHAR(10) PRIMARY KEY, username VARCHAR(100),password VARCHAR(300),empId VARCHAR(10), FOREIGN KEY (empId) REFERENCES employee(id))ENGINE=INNODB;
+
+CREATE TABLE user_role(userId VARCHAR(10),roleId INT,
+	CONSTRAINT PRIMARY KEY(userId,roleId),
+	CONSTRAINT FOREIGN  KEY(userId) REFERENCES user(id),
+	CONSTRAINT FOREIGN  KEY(roleId)	REFERENCES role(id))ENGINE=INNODB;
+
+CREATE TABLE student(id VARCHAR(10) PRIMARY KEY,name VARCHAR(100),dobirth DATE,gender VARCHAR(20),address VARCHAR(150),guardian VARCHAR(60),contact VARCHAR(10))ENGINE=INNODB;
+
+INSERT INTO role(role) VALUES('Admin'),('Teacher'),('Receptionist'),('Director of Studies');

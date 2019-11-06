@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentInfo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad41f636-efea-4b0f-80e8-4d261c0cae7e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DEP_4"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="studentId" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT sms.student.id,
+	sms.student.name,
+	sms.student.dobirth,
+	sms.student.gender,
+	sms.student.address,
+	sms.student.guardian,
+	sms.student.contact
+FROM sms.student WHERE student.id=$P{studentId}]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="dobirth" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="dobirth"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="gender" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="gender"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="guardian" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="guardian"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="contact" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="contact"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<image>
+				<reportElement x="120" y="0" width="310" height="84" uuid="964b99f0-e617-4ae2-8bb3-e4de3ccc1428">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<imageExpression><![CDATA["lk/ijse/dep/sms/images/title.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="52" uuid="69614334-c63e-4dc2-920b-bad2770d7453"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Information]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="270" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="100" height="30" uuid="bb11ae96-81c8-416e-baa5-4979871c7e2f"/>
+				<text><![CDATA[Student Id :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="100" height="30" uuid="bfcbceb1-e8e8-4a4f-8b2a-58673917afdf"/>
+				<text><![CDATA[Date of Birth :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="100" height="30" uuid="ecf5c96d-7eea-4c37-ac6c-f167cc12b0ff"/>
+				<text><![CDATA[Student Name :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="130" width="100" height="30" uuid="55b02b24-2034-4dad-8c99-6527eb455421"/>
+				<text><![CDATA[Gender :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="170" width="100" height="30" uuid="cd23bdad-1d26-41b4-9b43-72d9d8ad5af4"/>
+				<text><![CDATA[Address :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="210" width="100" height="30" uuid="aea53bc4-8cae-4a51-a581-c8a2895c9e3e"/>
+				<text><![CDATA[Guardian Details :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="50" width="100" height="30" uuid="f21211c7-10e6-4a26-b88c-194522d13a39"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="90" width="100" height="30" uuid="0172e6d6-769b-4250-bd5f-a56b7151d81e"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format($F{dobirth})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="130" width="100" height="30" uuid="8889f237-abfc-47a5-8f0e-404033b11c86"/>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="170" width="100" height="30" uuid="5922cedb-b55d-4215-bc29-9d4df3e5ecfd"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="210" width="100" height="30" uuid="10624286-34e8-46d5-80c4-2304c0568141"/>
+				<textFieldExpression><![CDATA[$F{guardian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="230" width="100" height="30" uuid="05f33f06-113b-4347-ab0c-b94a6c25087f"/>
+				<textFieldExpression><![CDATA[$F{contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="10" width="100" height="30" uuid="75f20050-4993-4ec4-9c85-67fe2e1163e3"/>
+				<textFieldExpression><![CDATA[$P{studentId}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
